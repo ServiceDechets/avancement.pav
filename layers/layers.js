@@ -24,13 +24,29 @@ var lyr_COMMUNE_GA_1 = new ol.layer.Vector({
                 source:jsonSource_COMMUNE_GA_1, 
                 style: style_COMMUNE_GA_1,
                 popuplayertitle: "COMMUNE_GA",
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/COMMUNE_GA_1.png" /> COMMUNE_GA'
             });
+var group_ViuzlaChisaz = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Viuz-la-Chiésaz"});
 var group_Territoire = new ol.layer.Group({
                                 layers: [lyr_COMMUNE_GA_1,],
                                 fold: "open",
                                 title: "Territoire"});
+var group_Nature = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Nature"});
+var group_Topo = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Topo"});
+var group_Parcellaire = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Parcellaire"});
 
 lyr_WazeWorld_0.setVisible(true);lyr_COMMUNE_GA_1.setVisible(true);
 var layersList = [lyr_WazeWorld_0,group_Territoire];
