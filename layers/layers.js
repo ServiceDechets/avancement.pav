@@ -42,26 +42,27 @@ var lyr_COMMUNE_GA_2 = new ol.layer.Vector({
                 interactive: false,
                 title: '<img src="styles/legend/COMMUNE_GA_2.png" /> COMMUNE_GA'
             });
-var format_SUIVI_PAV_3 = new ol.format.GeoJSON();
-var features_SUIVI_PAV_3 = format_SUIVI_PAV_3.readFeatures(json_SUIVI_PAV_3, 
+var format_Projetdeconteneurisation_3 = new ol.format.GeoJSON();
+var features_Projetdeconteneurisation_3 = format_Projetdeconteneurisation_3.readFeatures(json_Projetdeconteneurisation_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_SUIVI_PAV_3 = new ol.source.Vector({
+var jsonSource_Projetdeconteneurisation_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_SUIVI_PAV_3.addFeatures(features_SUIVI_PAV_3);
-var lyr_SUIVI_PAV_3 = new ol.layer.Vector({
+jsonSource_Projetdeconteneurisation_3.addFeatures(features_Projetdeconteneurisation_3);
+var lyr_Projetdeconteneurisation_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_SUIVI_PAV_3, 
-                style: style_SUIVI_PAV_3,
-                popuplayertitle: "SUIVI_PAV",
+                source:jsonSource_Projetdeconteneurisation_3, 
+                style: style_Projetdeconteneurisation_3,
+                popuplayertitle: "Projet de conteneurisation",
                 interactive: true,
-    title: 'SUIVI_PAV<br />\
-    <img src="styles/legend/SUIVI_PAV_3_0.png" /> Nouveau<br />\
-    <img src="styles/legend/SUIVI_PAV_3_1.png" /> Validé<br />\
-    <img src="styles/legend/SUIVI_PAV_3_2.png" /> Date programmée<br />\
-    <img src="styles/legend/SUIVI_PAV_3_3.png" /> Matériel commandé<br />\
-    <img src="styles/legend/SUIVI_PAV_3_4.png" /> Travaux finalisés<br />\
-    <img src="styles/legend/SUIVI_PAV_3_5.png" /> Annulé<br />'
+    title: 'Projet de conteneurisation<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_0.png" /> Nouveau<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_1.png" /> Validé<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_2.png" /> Date programmée<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_3.png" /> Matériel commandé<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_4.png" /> Travaux finalisés<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_5.png" /> Livraison réalisée<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_6.png" /> Annulé<br />'
         });
 var group_ViuzlaChisaz = new ol.layer.Group({
                                 layers: [],
@@ -84,17 +85,17 @@ var group_Parcellaire = new ol.layer.Group({
                                 fold: "open",
                                 title: "Parcellaire"});
 
-lyr_ESRIGraylight_0.setVisible(true);lyr_PERIMETRE_GA_1.setVisible(true);lyr_COMMUNE_GA_2.setVisible(true);lyr_SUIVI_PAV_3.setVisible(true);
-var layersList = [lyr_ESRIGraylight_0,group_Territoire,lyr_SUIVI_PAV_3];
+lyr_ESRIGraylight_0.setVisible(true);lyr_PERIMETRE_GA_1.setVisible(true);lyr_COMMUNE_GA_2.setVisible(true);lyr_Projetdeconteneurisation_3.setVisible(true);
+var layersList = [lyr_ESRIGraylight_0,group_Territoire,lyr_Projetdeconteneurisation_3];
 lyr_PERIMETRE_GA_1.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
 lyr_COMMUNE_GA_2.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
-lyr_SUIVI_PAV_3.set('fieldAliases', {'Site': 'Site', 'Commune': 'Commune', 'Maitrise d\'Ouvrage': 'Maitrise d\'Ouvrage', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Statut': 'Statut', 'Type de conteneurs': 'Type de conteneurs', 'Nb OM': 'Nb OM', 'Nb MM': 'Nb MM', 'Nb V': 'Nb V', });
+lyr_Projetdeconteneurisation_3.set('fieldAliases', {'Site': 'Site', 'Commune': 'Commune', 'Maitrise d\'Ouvrage': 'Maitrise d\'Ouvrage', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Statut': 'Statut', 'Soutien Bureau d\'étude': 'Soutien Bureau d\'étude', 'Type de conteneurs': 'Type de conteneurs', 'Nb OM': 'Nb OM', 'Nb MM': 'Nb MM', 'Nb V': 'Nb V', });
 lyr_PERIMETRE_GA_1.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
 lyr_COMMUNE_GA_2.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
-lyr_SUIVI_PAV_3.set('fieldImages', {'Site': 'TextEdit', 'Commune': 'TextEdit', 'Maitrise d\'Ouvrage': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Statut': 'TextEdit', 'Type de conteneurs': '', 'Nb OM': '', 'Nb MM': '', 'Nb V': '', });
+lyr_Projetdeconteneurisation_3.set('fieldImages', {'Site': 'TextEdit', 'Commune': 'TextEdit', 'Maitrise d\'Ouvrage': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Statut': 'TextEdit', 'Soutien Bureau d\'étude': 'TextEdit', 'Type de conteneurs': 'TextEdit', 'Nb OM': 'Range', 'Nb MM': 'Range', 'Nb V': 'Range', });
 lyr_PERIMETRE_GA_1.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'hidden field', 'NOM': 'hidden field', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
 lyr_COMMUNE_GA_2.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'hidden field', 'NOM': 'hidden field', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
-lyr_SUIVI_PAV_3.set('fieldLabels', {'Site': 'header label - always visible', 'Commune': 'hidden field', 'Maitrise d\'Ouvrage': 'hidden field', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'Statut': 'header label - always visible', 'Type de conteneurs': 'hidden field', 'Nb OM': 'inline label - always visible', 'Nb MM': 'inline label - always visible', 'Nb V': 'inline label - always visible', });
-lyr_SUIVI_PAV_3.on('precompose', function(evt) {
+lyr_Projetdeconteneurisation_3.set('fieldLabels', {'Site': 'header label - always visible', 'Commune': 'hidden field', 'Maitrise d\'Ouvrage': 'hidden field', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'Statut': 'header label - always visible', 'Soutien Bureau d\'étude': 'header label - always visible', 'Type de conteneurs': 'hidden field', 'Nb OM': 'no label', 'Nb MM': 'inline label - always visible', 'Nb V': 'inline label - always visible', });
+lyr_Projetdeconteneurisation_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
