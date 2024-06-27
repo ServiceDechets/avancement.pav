@@ -1,96 +1,100 @@
 var wms_layers = [];
 
-var format_Liste_Sites_AV_0 = new ol.format.GeoJSON();
-var features_Liste_Sites_AV_0 = format_Liste_Sites_AV_0.readFeatures(json_Liste_Sites_AV_0, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Liste_Sites_AV_0 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_Liste_Sites_AV_0.addFeatures(features_Liste_Sites_AV_0);
-var lyr_Liste_Sites_AV_0 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_Liste_Sites_AV_0, 
-                style: style_Liste_Sites_AV_0,
-                popuplayertitle: "Liste_Sites_AV",
-                interactive: false,
-                title: '<img src="styles/legend/Liste_Sites_AV_0.png" /> Liste_Sites_AV'
-            });
 
-        var lyr_WazeWorld_1 = new ol.layer.Tile({
-            'title': 'Waze (World)',
+        var lyr_ESRIGraylight_0 = new ol.layer.Tile({
+            'title': 'ESRI Gray (light)',
             //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
     attributions: ' ',
-                url: 'https://worldtiles3.waze.com/tiles/{z}/{x}/{y}.png'
+                url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
             })
         });
-var format_PERIMETRE_GA_2 = new ol.format.GeoJSON();
-var features_PERIMETRE_GA_2 = format_PERIMETRE_GA_2.readFeatures(json_PERIMETRE_GA_2, 
+var format_PERIMETRE_GA_1 = new ol.format.GeoJSON();
+var features_PERIMETRE_GA_1 = format_PERIMETRE_GA_1.readFeatures(json_PERIMETRE_GA_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_PERIMETRE_GA_2 = new ol.source.Vector({
+var jsonSource_PERIMETRE_GA_1 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PERIMETRE_GA_2.addFeatures(features_PERIMETRE_GA_2);
-var lyr_PERIMETRE_GA_2 = new ol.layer.Vector({
+jsonSource_PERIMETRE_GA_1.addFeatures(features_PERIMETRE_GA_1);
+var lyr_PERIMETRE_GA_1 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PERIMETRE_GA_2, 
-                style: style_PERIMETRE_GA_2,
+                source:jsonSource_PERIMETRE_GA_1, 
+                style: style_PERIMETRE_GA_1,
                 popuplayertitle: "PERIMETRE_GA",
                 interactive: false,
-                title: '<img src="styles/legend/PERIMETRE_GA_2.png" /> PERIMETRE_GA'
+                title: '<img src="styles/legend/PERIMETRE_GA_1.png" /> PERIMETRE_GA'
             });
-var format_COMMUNE_GA_3 = new ol.format.GeoJSON();
-var features_COMMUNE_GA_3 = format_COMMUNE_GA_3.readFeatures(json_COMMUNE_GA_3, 
+var format_COMMUNE_GA_2 = new ol.format.GeoJSON();
+var features_COMMUNE_GA_2 = format_COMMUNE_GA_2.readFeatures(json_COMMUNE_GA_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_COMMUNE_GA_3 = new ol.source.Vector({
+var jsonSource_COMMUNE_GA_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_COMMUNE_GA_3.addFeatures(features_COMMUNE_GA_3);
-var lyr_COMMUNE_GA_3 = new ol.layer.Vector({
+jsonSource_COMMUNE_GA_2.addFeatures(features_COMMUNE_GA_2);
+var lyr_COMMUNE_GA_2 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_COMMUNE_GA_3, 
-                style: style_COMMUNE_GA_3,
+                source:jsonSource_COMMUNE_GA_2, 
+                style: style_COMMUNE_GA_2,
                 popuplayertitle: "COMMUNE_GA",
                 interactive: false,
-                title: '<img src="styles/legend/COMMUNE_GA_3.png" /> COMMUNE_GA'
+                title: '<img src="styles/legend/COMMUNE_GA_2.png" /> COMMUNE_GA'
             });
-var format_SURFACE_EAU_GA_4 = new ol.format.GeoJSON();
-var features_SURFACE_EAU_GA_4 = format_SURFACE_EAU_GA_4.readFeatures(json_SURFACE_EAU_GA_4, 
+var format_SUIVI_PAV_3 = new ol.format.GeoJSON();
+var features_SUIVI_PAV_3 = format_SUIVI_PAV_3.readFeatures(json_SUIVI_PAV_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_SURFACE_EAU_GA_4 = new ol.source.Vector({
+var jsonSource_SUIVI_PAV_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_SURFACE_EAU_GA_4.addFeatures(features_SURFACE_EAU_GA_4);
-var lyr_SURFACE_EAU_GA_4 = new ol.layer.Vector({
+jsonSource_SUIVI_PAV_3.addFeatures(features_SUIVI_PAV_3);
+var lyr_SUIVI_PAV_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_SURFACE_EAU_GA_4, 
-                style: style_SURFACE_EAU_GA_4,
-                popuplayertitle: "SURFACE_EAU_GA",
-                interactive: false,
-                title: '<img src="styles/legend/SURFACE_EAU_GA_4.png" /> SURFACE_EAU_GA'
-            });
+                source:jsonSource_SUIVI_PAV_3, 
+                style: style_SUIVI_PAV_3,
+                popuplayertitle: "SUIVI_PAV",
+                interactive: true,
+    title: 'SUIVI_PAV<br />\
+    <img src="styles/legend/SUIVI_PAV_3_0.png" /> Nouveau<br />\
+    <img src="styles/legend/SUIVI_PAV_3_1.png" /> Validé<br />\
+    <img src="styles/legend/SUIVI_PAV_3_2.png" /> Date programmée<br />\
+    <img src="styles/legend/SUIVI_PAV_3_3.png" /> Matériel commandé<br />\
+    <img src="styles/legend/SUIVI_PAV_3_4.png" /> Travaux finalisés<br />\
+    <img src="styles/legend/SUIVI_PAV_3_5.png" /> Annulé<br />'
+        });
+var group_ViuzlaChisaz = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Viuz-la-Chiésaz"});
 var group_Territoire = new ol.layer.Group({
-                                layers: [lyr_PERIMETRE_GA_2,lyr_COMMUNE_GA_3,lyr_SURFACE_EAU_GA_4,],
+                                layers: [lyr_PERIMETRE_GA_1,lyr_COMMUNE_GA_2,],
                                 fold: "open",
                                 title: "Territoire"});
+var group_Nature = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Nature"});
+var group_Topo = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Topo"});
+var group_Parcellaire = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Parcellaire"});
 
-lyr_Liste_Sites_AV_0.setVisible(true);lyr_WazeWorld_1.setVisible(true);lyr_PERIMETRE_GA_2.setVisible(true);lyr_COMMUNE_GA_3.setVisible(true);lyr_SURFACE_EAU_GA_4.setVisible(false);
-var layersList = [lyr_Liste_Sites_AV_0,lyr_WazeWorld_1,group_Territoire];
-lyr_Liste_Sites_AV_0.set('fieldAliases', {'Site': 'Site', 'Lat': 'Lat', 'Long': 'Long', 'OM': 'OM', 'CS': 'CS', 'V': 'V', });
-lyr_PERIMETRE_GA_2.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
-lyr_COMMUNE_GA_3.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
-lyr_SURFACE_EAU_GA_4.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'PREC_ALTI': 'PREC_ALTI', 'NATURE': 'NATURE', 'REGIME': 'REGIME', 'Z_MOYEN': 'Z_MOYEN', });
-lyr_Liste_Sites_AV_0.set('fieldImages', {'Site': 'TextEdit', 'Lat': 'TextEdit', 'Long': 'TextEdit', 'OM': 'CheckBox', 'CS': 'CheckBox', 'V': 'CheckBox', });
-lyr_PERIMETRE_GA_2.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
-lyr_COMMUNE_GA_3.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
-lyr_SURFACE_EAU_GA_4.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'PREC_ALTI': 'TextEdit', 'NATURE': 'TextEdit', 'REGIME': 'TextEdit', 'Z_MOYEN': 'TextEdit', });
-lyr_Liste_Sites_AV_0.set('fieldLabels', {'Site': 'no label', 'Lat': 'no label', 'Long': 'no label', 'OM': 'no label', 'CS': 'no label', 'V': 'no label', });
-lyr_PERIMETRE_GA_2.set('fieldLabels', {'ID': 'no label', 'PREC_PLANI': 'no label', 'NOM': 'no label', 'CODE_INSEE': 'no label', 'STATUT': 'no label', 'CANTON': 'no label', 'ARRONDISST': 'no label', 'DEPART': 'no label', 'REGION': 'no label', 'POPUL': 'no label', 'MULTICAN': 'no label', });
-lyr_COMMUNE_GA_3.set('fieldLabels', {'ID': 'no label', 'PREC_PLANI': 'no label', 'NOM': 'no label', 'CODE_INSEE': 'no label', 'STATUT': 'no label', 'CANTON': 'no label', 'ARRONDISST': 'no label', 'DEPART': 'no label', 'REGION': 'no label', 'POPUL': 'no label', 'MULTICAN': 'no label', });
-lyr_SURFACE_EAU_GA_4.set('fieldLabels', {'ID': 'no label', 'PREC_PLANI': 'no label', 'PREC_ALTI': 'no label', 'NATURE': 'no label', 'REGIME': 'no label', 'Z_MOYEN': 'no label', });
-lyr_SURFACE_EAU_GA_4.on('precompose', function(evt) {
+lyr_ESRIGraylight_0.setVisible(true);lyr_PERIMETRE_GA_1.setVisible(true);lyr_COMMUNE_GA_2.setVisible(true);lyr_SUIVI_PAV_3.setVisible(true);
+var layersList = [lyr_ESRIGraylight_0,group_Territoire,lyr_SUIVI_PAV_3];
+lyr_PERIMETRE_GA_1.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
+lyr_COMMUNE_GA_2.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
+lyr_SUIVI_PAV_3.set('fieldAliases', {'Site': 'Site', 'Commune': 'Commune', 'Maitrise d\'Ouvrage': 'Maitrise d\'Ouvrage', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Statut': 'Statut', 'Type de conteneurs': 'Type de conteneurs', 'Nb OM': 'Nb OM', 'Nb MM': 'Nb MM', 'Nb V': 'Nb V', });
+lyr_PERIMETRE_GA_1.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
+lyr_COMMUNE_GA_2.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
+lyr_SUIVI_PAV_3.set('fieldImages', {'Site': 'TextEdit', 'Commune': 'TextEdit', 'Maitrise d\'Ouvrage': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Statut': 'TextEdit', 'Type de conteneurs': '', 'Nb OM': '', 'Nb MM': '', 'Nb V': '', });
+lyr_PERIMETRE_GA_1.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'hidden field', 'NOM': 'hidden field', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
+lyr_COMMUNE_GA_2.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'hidden field', 'NOM': 'hidden field', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
+lyr_SUIVI_PAV_3.set('fieldLabels', {'Site': 'header label - always visible', 'Commune': 'hidden field', 'Maitrise d\'Ouvrage': 'hidden field', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'Statut': 'header label - always visible', 'Type de conteneurs': 'hidden field', 'Nb OM': 'inline label - always visible', 'Nb MM': 'inline label - always visible', 'Nb V': 'inline label - always visible', });
+lyr_SUIVI_PAV_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
