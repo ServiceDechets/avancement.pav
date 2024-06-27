@@ -21,7 +21,7 @@ case 'Validé':
                               bufferWidth)
     })];
                     break;
-case 'Date programmée':
+case 'Matériel commandé':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 8.0 + size,
             stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(255,192,0,1.0)'})}),
@@ -30,7 +30,7 @@ case 'Date programmée':
                               bufferWidth)
     })];
                     break;
-case 'Matériel commandé':
+case 'Date programmée':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 8.0 + size,
             stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(237,125,42,1.0)'})}),
