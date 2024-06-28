@@ -39,7 +39,7 @@ case 'Date programmée':
                               bufferWidth)
     })];
                     break;
-case 'Travaux finalisés':
+case 'Livraison réalisée':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 8.0 + size,
             stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(146,208,80,1.0)'})}),
@@ -48,7 +48,7 @@ case 'Travaux finalisés':
                               bufferWidth)
     })];
                     break;
-case 'Livraison réalisée':
+case 'Travaux finalisés':
                     return [ new ol.style.Style({
         image: new ol.style.Circle({radius: 8.0 + size,
             stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(0,176,80,1.0)'})}),

@@ -60,8 +60,8 @@ var lyr_Projetdeconteneurisation_3 = new ol.layer.Vector({
     <img src="styles/legend/Projetdeconteneurisation_3_1.png" /> Validé<br />\
     <img src="styles/legend/Projetdeconteneurisation_3_2.png" /> Matériel commandé<br />\
     <img src="styles/legend/Projetdeconteneurisation_3_3.png" /> Date programmée<br />\
-    <img src="styles/legend/Projetdeconteneurisation_3_4.png" /> Travaux finalisés<br />\
-    <img src="styles/legend/Projetdeconteneurisation_3_5.png" /> Livraison réalisée<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_4.png" /> Livraison réalisée<br />\
+    <img src="styles/legend/Projetdeconteneurisation_3_5.png" /> Travaux finalisés<br />\
     <img src="styles/legend/Projetdeconteneurisation_3_6.png" /> Annulé<br />'
         });
 var group_ViuzlaChisaz = new ol.layer.Group({
@@ -92,8 +92,8 @@ lyr_GrandAnnecy_2.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', '
 lyr_Projetdeconteneurisation_3.set('fieldAliases', {'Site': 'Site', 'Commune': 'Commune', 'Maitrise d\'Ouvrage': 'Maitrise d\'Ouvrage', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Statut': 'Statut', 'Soutien Bureau d\'étude': 'Soutien Bureau d\'étude', 'Type de conteneurs': 'Type de conteneurs', 'Nb OM': 'Nb OM', 'Nb MM': 'Nb MM', 'Nb V': 'Nb V', 'Date de livarison': 'Date de livarison', });
 lyr_Communes_1.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
 lyr_GrandAnnecy_2.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
-lyr_Projetdeconteneurisation_3.set('fieldImages', {'Site': 'TextEdit', 'Commune': 'TextEdit', 'Maitrise d\'Ouvrage': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Statut': 'TextEdit', 'Soutien Bureau d\'étude': 'TextEdit', 'Type de conteneurs': 'TextEdit', 'Nb OM': 'Range', 'Nb MM': 'Range', 'Nb V': 'Range', 'Date de livarison': '', });
-lyr_Communes_1.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'header label - always visible', 'NOM': 'hidden field', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
+lyr_Projetdeconteneurisation_3.set('fieldImages', {'Site': 'TextEdit', 'Commune': 'TextEdit', 'Maitrise d\'Ouvrage': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Statut': 'TextEdit', 'Soutien Bureau d\'étude': 'TextEdit', 'Type de conteneurs': 'TextEdit', 'Nb OM': 'Range', 'Nb MM': 'Range', 'Nb V': 'Range', 'Date de livarison': 'Range', });
+lyr_Communes_1.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'header label - always visible', 'NOM': 'header label - visible with data', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
 lyr_GrandAnnecy_2.set('fieldLabels', {'ID': 'header label - visible with data', 'PREC_PLANI': 'header label - visible with data', 'NOM': 'hidden field', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
 lyr_Projetdeconteneurisation_3.set('fieldLabels', {'Site': 'header label - always visible', 'Commune': 'hidden field', 'Maitrise d\'Ouvrage': 'hidden field', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'Statut': 'header label - always visible', 'Soutien Bureau d\'étude': 'header label - always visible', 'Type de conteneurs': 'header label - always visible', 'Nb OM': 'inline label - always visible', 'Nb MM': 'inline label - always visible', 'Nb V': 'inline label - always visible', 'Date de livarison': 'no label', });
 lyr_Projetdeconteneurisation_3.on('precompose', function(evt) {
