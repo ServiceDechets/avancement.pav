@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("IGNF:LAMB93").setExtent([906016.103193, 6512291.058989, 988968.067264, 6565343.272055]);
+//ol.proj.get("IGNF:LAMB93").setExtent([897399.367313, 6514817.354849, 996099.205578, 6562937.275997]);
 var wms_layers = [];
 
 
@@ -89,7 +89,7 @@ var lyr_Projetsdepuis2023_5 = new ol.layer.Vector({
     <img src="styles/legend/Projetsdepuis2023_5_1.png" /> En cours d\'étude<br />\
     <img src="styles/legend/Projetsdepuis2023_5_2.png" /> Projet validé<br />\
     <img src="styles/legend/Projetsdepuis2023_5_3.png" /> Matériel commandé<br />\
-    <img src="styles/legend/Projetsdepuis2023_5_4.png" /> Travaux programmé<br />\
+    <img src="styles/legend/Projetsdepuis2023_5_4.png" /> Travaux programmés<br />\
     <img src="styles/legend/Projetsdepuis2023_5_5.png" /> Livraison réalisée<br />\
     <img src="styles/legend/Projetsdepuis2023_5_6.png" /> Terminé<br />\
     <img src="styles/legend/Projetsdepuis2023_5_7.png" /> Annulé<br />'
