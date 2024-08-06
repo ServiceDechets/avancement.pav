@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("IGNF:LAMB93").setExtent([900093.772526, 6505418.537832, 993121.272526, 6572172.912832]);
+//ol.proj.get("IGNF:LAMB93").setExtent([897474.397526, 6503890.569082, 990501.897526, 6570644.944082]);
 var wms_layers = [];
 
 
@@ -53,7 +53,7 @@ var lyr_Communes_3 = new ol.layer.Vector({
                 source:jsonSource_Communes_3, 
                 style: style_Communes_3,
                 popuplayertitle: "Communes",
-                interactive: true,
+                interactive: false,
                 title: '<img src="styles/legend/Communes_3.png" /> Communes'
             });
 var format_GrandAnnecy_4 = new ol.format.GeoJSON();
@@ -68,7 +68,7 @@ var lyr_GrandAnnecy_4 = new ol.layer.Vector({
                 source:jsonSource_GrandAnnecy_4, 
                 style: style_GrandAnnecy_4,
                 popuplayertitle: "Grand Annecy",
-                interactive: true,
+                interactive: false,
                 title: '<img src="styles/legend/GrandAnnecy_4.png" /> Grand Annecy'
             });
 var format_Projetsdepuis2023_5 = new ol.format.GeoJSON();
