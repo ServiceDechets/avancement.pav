@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("IGNF:LAMB93").setExtent([914788.503115, 6516283.314447, 976806.836449, 6560786.231114]);
+//ol.proj.get("IGNF:LAMB93").setExtent([900093.772526, 6505418.537832, 993121.272526, 6572172.912832]);
 var wms_layers = [];
 
 
