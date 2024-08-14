@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("IGNF:LAMB93").setExtent([897474.397526, 6503890.569082, 990501.897526, 6570644.944082]);
+//ol.proj.get("IGNF:LAMB93").setExtent([892348.445239, 6506099.710095, 991249.695239, 6569758.460095]);
 var wms_layers = [];
 
 
@@ -114,10 +114,6 @@ var group_Territoire = new ol.layer.Group({
                                 layers: [lyr_Communes_3,lyr_GrandAnnecy_4,],
                                 fold: "open",
                                 title: "Territoire"});
-var group_Raster = new ol.layer.Group({
-                                layers: [lyr_Satellite_0,lyr_OpenStreetMap_1,lyr_ESRI_2,],
-                                fold: "open",
-                                title: "Raster"});
 var group_Nature = new ol.layer.Group({
                                 layers: [],
                                 fold: "open",
@@ -126,6 +122,10 @@ var group_Parcellaire = new ol.layer.Group({
                                 layers: [],
                                 fold: "open",
                                 title: "Parcellaire"});
+var group_Raster = new ol.layer.Group({
+                                layers: [lyr_Satellite_0,lyr_OpenStreetMap_1,lyr_ESRI_2,],
+                                fold: "open",
+                                title: "Raster"});
 var group_Topo = new ol.layer.Group({
                                 layers: [],
                                 fold: "open",
@@ -135,13 +135,13 @@ lyr_Satellite_0.setVisible(false);lyr_OpenStreetMap_1.setVisible(true);lyr_ESRI_
 var layersList = [group_Raster,group_Territoire,group_SuivideschantiersPAV];
 lyr_Communes_3.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
 lyr_GrandAnnecy_4.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
-lyr_Projetsdepuis2023_5.set('fieldAliases', {'Site': 'Site', 'Commune': 'Commune', 'Secteur': 'Secteur', 'Lat': 'Lat', 'Long': 'Long', 'Statut': 'Statut', 'Soutien Etude': 'Soutien Etude', 'Type de conteneurs': 'Type de conteneurs', 'Nb OM': 'Nb OM', 'Nb MM': 'Nb MM', 'Nb V': 'Nb V', 'Nb CAR': 'Nb CAR', 'Nb Tot': 'Nb Tot', });
+lyr_Projetsdepuis2023_5.set('fieldAliases', {'Site': 'Site', 'Code': 'Code', 'Commune': 'Commune', 'Secteur': 'Secteur', 'Lat': 'Lat', 'Long': 'Long', 'Commentaires': 'Commentaires', 'Statut': 'Statut', 'Soutien Etude': 'Soutien Etude', 'Type de conteneurs': 'Type de conteneurs', 'Nb OM': 'Nb OM', 'Nb MM': 'Nb MM', 'Nb V': 'Nb V', 'Nb CAR': 'Nb CAR', 'Nb Tot': 'Nb Tot', });
 lyr_Communes_3.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
 lyr_GrandAnnecy_4.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
-lyr_Projetsdepuis2023_5.set('fieldImages', {'Site': 'TextEdit', 'Commune': 'TextEdit', 'Secteur': 'TextEdit', 'Lat': 'TextEdit', 'Long': 'TextEdit', 'Statut': 'TextEdit', 'Soutien Etude': '', 'Type de conteneurs': 'TextEdit', 'Nb OM': 'Range', 'Nb MM': 'Range', 'Nb V': 'Range', 'Nb CAR': 'Range', 'Nb Tot': 'Range', });
-lyr_Communes_3.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'header label - visible with data', 'NOM': 'header label - visible with data', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
-lyr_GrandAnnecy_4.set('fieldLabels', {'ID': 'hidden field', 'PREC_PLANI': 'hidden field', 'NOM': 'no label', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
-lyr_Projetsdepuis2023_5.set('fieldLabels', {'Site': 'header label - always visible', 'Commune': 'no label', 'Secteur': 'header label - always visible', 'Lat': 'hidden field', 'Long': 'hidden field', 'Statut': 'header label - always visible', 'Soutien Etude': 'hidden field', 'Type de conteneurs': 'header label - always visible', 'Nb OM': 'inline label - visible with data', 'Nb MM': 'inline label - visible with data', 'Nb V': 'inline label - visible with data', 'Nb CAR': 'inline label - visible with data', 'Nb Tot': 'inline label - visible with data', });
+lyr_Projetsdepuis2023_5.set('fieldImages', {'Site': 'TextEdit', 'Code': '', 'Commune': 'TextEdit', 'Secteur': 'TextEdit', 'Lat': 'TextEdit', 'Long': 'TextEdit', 'Commentaires': '', 'Statut': 'TextEdit', 'Soutien Etude': '', 'Type de conteneurs': 'TextEdit', 'Nb OM': 'Range', 'Nb MM': 'Range', 'Nb V': 'Range', 'Nb CAR': 'Range', 'Nb Tot': 'Range', });
+lyr_Communes_3.set('fieldLabels', {'ID': 'header label - always visible', 'PREC_PLANI': 'header label - visible with data', 'NOM': 'header label - visible with data', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
+lyr_GrandAnnecy_4.set('fieldLabels', {'ID': 'header label - visible with data', 'PREC_PLANI': 'hidden field', 'NOM': 'no label', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
+lyr_Projetsdepuis2023_5.set('fieldLabels', {'Site': 'header label - visible with data', 'Code': 'inline label - visible with data', 'Commune': 'inline label - always visible', 'Secteur': 'header label - always visible', 'Lat': 'hidden field', 'Long': 'hidden field', 'Commentaires': 'no label', 'Statut': 'header label - always visible', 'Soutien Etude': 'hidden field', 'Type de conteneurs': 'header label - always visible', 'Nb OM': 'inline label - visible with data', 'Nb MM': 'inline label - visible with data', 'Nb V': 'inline label - visible with data', 'Nb CAR': 'inline label - visible with data', 'Nb Tot': 'inline label - visible with data', });
 lyr_Projetsdepuis2023_5.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });

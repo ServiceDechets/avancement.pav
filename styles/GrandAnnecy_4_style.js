@@ -21,7 +21,7 @@ var style_GrandAnnecy_4 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(33,33,33,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.976}),fill: new ol.style.Fill({color: 'rgba(232,113,141,0.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(0,112,192,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.976}),fill: new ol.style.Fill({color: 'rgba(232,113,141,0.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
