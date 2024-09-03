@@ -1,21 +1,9 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("IGNF:LAMB93").setExtent([892348.445239, 6506099.710095, 991249.695239, 6569758.460095]);
+//ol.proj.get("IGNF:LAMB93").setExtent([894965.339771, 6504276.565564, 993866.589771, 6567935.315564]);
 var wms_layers = [];
 
 
-        var lyr_Satellite_0 = new ol.layer.Tile({
-            'title': 'Satellite',
-            //'type': 'base',
-            'opacity': 1.000000,
-            
-            
-            source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://openstreetmap.fr/bdortho">BDOrtho IGN</a>',
-                url: 'https://proxy-ign.openstreetmap.fr/94GjiyqD/bdortho/{z}/{x}/{y}.jpg'
-            })
-        });
-
-        var lyr_OpenStreetMap_1 = new ol.layer.Tile({
+        var lyr_OpenStreetMap_0 = new ol.layer.Tile({
             'title': 'OpenStreetMap',
             //'type': 'base',
             'opacity': 1.000000,
@@ -29,7 +17,7 @@ maxResolution:2.8004466152261966,
             })
         });
 
-        var lyr_ESRI_2 = new ol.layer.Tile({
+        var lyr_ESRI_1 = new ol.layer.Tile({
             'title': 'ESRI',
             //'type': 'base',
             'opacity': 1.000000,
@@ -39,6 +27,18 @@ maxResolution:2.8004466152261966,
             source: new ol.source.XYZ({
     attributions: ' ',
                 url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
+            })
+        });
+
+        var lyr_BDOrthoIGN_2 = new ol.layer.Tile({
+            'title': 'BDOrtho IGN',
+            //'type': 'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+    attributions: ' &middot; <a href="https://openstreetmap.fr/bdortho">BDOrtho IGN</a>',
+                url: 'https://proxy-ign.openstreetmap.fr/94GjiyqD/bdortho/{z}/{x}/{y}.jpg'
             })
         });
 var format_Communes_3 = new ol.format.GeoJSON();
@@ -123,7 +123,7 @@ var group_Parcellaire = new ol.layer.Group({
                                 fold: "open",
                                 title: "Parcellaire"});
 var group_Raster = new ol.layer.Group({
-                                layers: [lyr_Satellite_0,lyr_OpenStreetMap_1,lyr_ESRI_2,],
+                                layers: [lyr_OpenStreetMap_0,lyr_ESRI_1,lyr_BDOrthoIGN_2,],
                                 fold: "open",
                                 title: "Raster"});
 var group_Topo = new ol.layer.Group({
@@ -131,7 +131,7 @@ var group_Topo = new ol.layer.Group({
                                 fold: "open",
                                 title: "Topo"});
 
-lyr_Satellite_0.setVisible(false);lyr_OpenStreetMap_1.setVisible(true);lyr_ESRI_2.setVisible(true);lyr_Communes_3.setVisible(true);lyr_GrandAnnecy_4.setVisible(true);lyr_Projetsdepuis2023_5.setVisible(true);
+lyr_OpenStreetMap_0.setVisible(true);lyr_ESRI_1.setVisible(true);lyr_BDOrthoIGN_2.setVisible(false);lyr_Communes_3.setVisible(true);lyr_GrandAnnecy_4.setVisible(true);lyr_Projetsdepuis2023_5.setVisible(true);
 var layersList = [group_Raster,group_Territoire,group_SuivideschantiersPAV];
 lyr_Communes_3.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
 lyr_GrandAnnecy_4.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
@@ -140,7 +140,7 @@ lyr_Communes_3.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', '
 lyr_GrandAnnecy_4.set('fieldImages', {'ID': 'TextEdit', 'PREC_PLANI': 'TextEdit', 'NOM': 'TextEdit', 'CODE_INSEE': 'TextEdit', 'STATUT': 'TextEdit', 'CANTON': 'TextEdit', 'ARRONDISST': 'TextEdit', 'DEPART': 'TextEdit', 'REGION': 'TextEdit', 'POPUL': 'Range', 'MULTICAN': 'TextEdit', });
 lyr_Projetsdepuis2023_5.set('fieldImages', {'Site': 'TextEdit', 'Code': '', 'Commune': 'TextEdit', 'Secteur': 'TextEdit', 'Lat': 'TextEdit', 'Long': 'TextEdit', 'Commentaires': '', 'Statut': 'TextEdit', 'Soutien Etude': '', 'Type de conteneurs': 'TextEdit', 'Nb OM': 'Range', 'Nb MM': 'Range', 'Nb V': 'Range', 'Nb CAR': 'Range', 'Nb Tot': 'Range', });
 lyr_Communes_3.set('fieldLabels', {'ID': 'header label - always visible', 'PREC_PLANI': 'header label - visible with data', 'NOM': 'header label - visible with data', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
-lyr_GrandAnnecy_4.set('fieldLabels', {'ID': 'header label - visible with data', 'PREC_PLANI': 'hidden field', 'NOM': 'no label', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'hidden field', });
+lyr_GrandAnnecy_4.set('fieldLabels', {'ID': 'header label - visible with data', 'PREC_PLANI': 'hidden field', 'NOM': 'no label', 'CODE_INSEE': 'hidden field', 'STATUT': 'hidden field', 'CANTON': 'hidden field', 'ARRONDISST': 'hidden field', 'DEPART': 'hidden field', 'REGION': 'hidden field', 'POPUL': 'hidden field', 'MULTICAN': 'no label', });
 lyr_Projetsdepuis2023_5.set('fieldLabels', {'Site': 'inline label - visible with data', 'Code': 'hidden field', 'Commune': 'inline label - visible with data', 'Secteur': 'inline label - visible with data', 'Lat': 'hidden field', 'Long': 'hidden field', 'Commentaires': 'header label - visible with data', 'Statut': 'header label - always visible', 'Soutien Etude': 'hidden field', 'Type de conteneurs': 'header label - always visible', 'Nb OM': 'inline label - visible with data', 'Nb MM': 'inline label - visible with data', 'Nb V': 'inline label - visible with data', 'Nb CAR': 'inline label - visible with data', 'Nb Tot': 'inline label - visible with data', });
 lyr_Projetsdepuis2023_5.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
