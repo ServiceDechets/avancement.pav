@@ -1,9 +1,21 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("IGNF:LAMB93").setExtent([894965.339771, 6504276.565564, 993866.589771, 6567935.315564]);
+//ol.proj.get("IGNF:LAMB93").setExtent([901773.846411, 6511757.886948, 984191.554733, 6564806.845274]);
 var wms_layers = [];
 
 
-        var lyr_OpenStreetMap_0 = new ol.layer.Tile({
+        var lyr_Satellite_0 = new ol.layer.Tile({
+            'title': 'Satellite',
+            //'type': 'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+    attributions: ' &middot; <a href="https://openstreetmap.fr/bdortho">BDOrtho IGN</a>',
+                url: 'https://proxy-ign.openstreetmap.fr/94GjiyqD/bdortho/{z}/{x}/{y}.jpg'
+            })
+        });
+
+        var lyr_OpenStreetMap_1 = new ol.layer.Tile({
             'title': 'OpenStreetMap',
             //'type': 'base',
             'opacity': 1.000000,
@@ -17,7 +29,7 @@ maxResolution:2.8004466152261966,
             })
         });
 
-        var lyr_ESRI_1 = new ol.layer.Tile({
+        var lyr_ESRI_2 = new ol.layer.Tile({
             'title': 'ESRI',
             //'type': 'base',
             'opacity': 1.000000,
@@ -27,18 +39,6 @@ maxResolution:2.8004466152261966,
             source: new ol.source.XYZ({
     attributions: ' ',
                 url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
-            })
-        });
-
-        var lyr_BDOrthoIGN_2 = new ol.layer.Tile({
-            'title': 'BDOrtho IGN',
-            //'type': 'base',
-            'opacity': 1.000000,
-            
-            
-            source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://openstreetmap.fr/bdortho">BDOrtho IGN</a>',
-                url: 'https://proxy-ign.openstreetmap.fr/94GjiyqD/bdortho/{z}/{x}/{y}.jpg'
             })
         });
 var format_Communes_3 = new ol.format.GeoJSON();
@@ -106,6 +106,14 @@ var group_ViuzlaChisaz = new ol.layer.Group({
                                 layers: [],
                                 fold: "open",
                                 title: "Viuz-la-Chiésaz"});
+var group_ZNIEFF = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "ZNIEFF"});
+var group_Divers = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "Divers"});
 var group_Commune = new ol.layer.Group({
                                 layers: [],
                                 fold: "open",
@@ -123,7 +131,7 @@ var group_Parcellaire = new ol.layer.Group({
                                 fold: "open",
                                 title: "Parcellaire"});
 var group_Raster = new ol.layer.Group({
-                                layers: [lyr_OpenStreetMap_0,lyr_ESRI_1,lyr_BDOrthoIGN_2,],
+                                layers: [lyr_Satellite_0,lyr_OpenStreetMap_1,lyr_ESRI_2,],
                                 fold: "open",
                                 title: "Raster"});
 var group_Topo = new ol.layer.Group({
@@ -131,7 +139,7 @@ var group_Topo = new ol.layer.Group({
                                 fold: "open",
                                 title: "Topo"});
 
-lyr_OpenStreetMap_0.setVisible(true);lyr_ESRI_1.setVisible(true);lyr_BDOrthoIGN_2.setVisible(false);lyr_Communes_3.setVisible(true);lyr_GrandAnnecy_4.setVisible(true);lyr_Projetsdepuis2023_5.setVisible(true);
+lyr_Satellite_0.setVisible(false);lyr_OpenStreetMap_1.setVisible(true);lyr_ESRI_2.setVisible(true);lyr_Communes_3.setVisible(true);lyr_GrandAnnecy_4.setVisible(true);lyr_Projetsdepuis2023_5.setVisible(true);
 var layersList = [group_Raster,group_Territoire,group_SuivideschantiersPAV];
 lyr_Communes_3.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
 lyr_GrandAnnecy_4.set('fieldAliases', {'ID': 'ID', 'PREC_PLANI': 'PREC_PLANI', 'NOM': 'NOM', 'CODE_INSEE': 'CODE_INSEE', 'STATUT': 'STATUT', 'CANTON': 'CANTON', 'ARRONDISST': 'ARRONDISST', 'DEPART': 'DEPART', 'REGION': 'REGION', 'POPUL': 'POPUL', 'MULTICAN': 'MULTICAN', });
